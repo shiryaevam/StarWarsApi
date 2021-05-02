@@ -15,11 +15,14 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:50px 15px;
+  padding: 50px 15px;
 }
-.backButton{
+.backButton {
   position: absolute;
-  right:50%;
+  right: 50%;
   top: 20px;
   z-index: 10;
+}
+.ant-pagination-options {
+  display: none !important;
 }

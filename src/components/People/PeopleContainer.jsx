@@ -91,7 +91,6 @@ class PeopleContainer extends React.Component {
     data: [],
     pagination: {
       current: 1,
-      pageSize: 10,
     },
     count: Number,
     loading: false,
@@ -118,7 +117,6 @@ class PeopleContainer extends React.Component {
         pagination: {
           showSizeChanger: true,
           current: 1,
-          pageSize: 10,
           total: data.count,
           onChange: this.onChange,
         },
@@ -143,33 +141,12 @@ class PeopleContainer extends React.Component {
         pagination: {
           showSizeChanger: true,
           current: page,
-          pageSize: 10,
           total: data.count,
           onChange: this.onChange,
         },
       });
     });
   };
-
-  // componentDidMount() {
-  //   axios
-  //     .get(
-  //       `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`
-  //     )
-  //     .then((response) => {
-  //       this.props.setUsers(response.data.items);
-  //       this.props.setTotalUsersCount(response.data.totalCount);
-  //     });
-  // }
-
-  // handleTableChange = (pagination, filters, sorter) => {
-  //   this.fetch({
-  //     sortField: sorter.field,
-  //     sortOrder: sorter.order,
-  //     pagination,
-  //     ...filters,
-  //   });
-  // };
 
   render() {
     const {data, pagination, loading} = this.state;

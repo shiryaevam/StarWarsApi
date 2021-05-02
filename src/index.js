@@ -8,6 +8,8 @@ import HomeContainer from "./components/Home/HomeContainer";
 import "antd/dist/antd.css";
 import Films from "./components/Films/Films";
 import PeopleContainer from "./components/People/PeopleContainer";
+import BackButton from "./components/BackButton/BackButton";
+import PlanetsContainer from "./components/Planets/PlanetsContainer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +18,10 @@ ReactDOM.render(
         <Route exact path="/" component={HomeContainer} />
         <Route path="/films" component={Films} />
         <Route path="/people" component={PeopleContainer} />
+        <Route path="/planets" component={PlanetsContainer} />
+        <Route path="/species" component={BackButton} />
+        <Route path="/starships" component={BackButton} />
+        <Route path="/vehicles" component={BackButton} />
       </Provider>
     </Router>
   </React.StrictMode>,
