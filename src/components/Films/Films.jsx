@@ -85,17 +85,17 @@ const COLUMNS = [
   //   },
   //   responsive: ["sm"],
   // },
-  {
-    title: "Species",
-    dataIndex: "species",
-    key: "species",
-    render: (text) => {
-      return text.map((e) => {
-        return ` ${e}`;
-      });
-    },
-    responsive: ["sm"],
-  },
+  // {
+  //   title: "Species",
+  //   dataIndex: "species",
+  //   key: "species",
+  //   render: (text) => {
+  //     return text.map((e) => {
+  //       return ` ${e}`;
+  //     });
+  //   },
+  //   responsive: ["sm"],
+  // },
   {
     title: "Created",
     dataIndex: "created",
