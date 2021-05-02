@@ -1,5 +1,4 @@
 import React from "react";
-import s from "./Home.module.css";
 import {Table} from "antd";
 
 function Home(props) {
