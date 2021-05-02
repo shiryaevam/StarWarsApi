@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import HomeContainer from "./components/Home/HomeContainer";
 import "antd/dist/antd.css";
 import Films from "./components/Films/Films";
+import PeopleContainer from "./components/People/PeopleContainer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Provider store={store}>
         <Route exact path="/" component={HomeContainer} />
         <Route path="/films" component={Films} />
+        <Route path="/people" component={PeopleContainer} />
       </Provider>
     </Router>
   </React.StrictMode>,
