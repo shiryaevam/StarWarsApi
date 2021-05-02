@@ -21,7 +21,7 @@ const COLUMNS = [
     title: "Description",
     dataIndex: "opening_crawl",
     key: "opening_crawl",
-    width: 200,
+    width: 600,
   },
   {
     title: "Director",
@@ -40,6 +40,9 @@ const COLUMNS = [
     dataIndex: "release_date",
     key: "release_date",
     responsive: ["sm"],
+    render: (text) => {
+      return moment(text).format("Do MMMM YYYY");
+    },
   },
   // {
   //   title: "Characters",
@@ -102,7 +105,7 @@ const COLUMNS = [
     key: "created",
     responsive: ["sm"],
     render: (text) => {
-      return moment(text).format("MMMM Do YYYY, h:mm:ss a");
+      return moment(text).format("Do MMMM YYYY, h:mm:ss a");
     },
   },
   {
@@ -111,11 +114,10 @@ const COLUMNS = [
     key: "edited",
     responsive: ["sm"],
     render: (text) => {
-      return moment(text).format("MMMM Do YYYY, h:mm:ss a");
+      return moment(text).format("Do MMMM YYYY, h:mm:ss a");
     },
   },
 ];
-debugger;
 
 const getRandomuserParams = (params) => ({
   results: params.pagination.pageSize,
@@ -124,13 +126,12 @@ const getRandomuserParams = (params) => ({
 });
 
 class Films extends React.Component {
-  keyRows = [1];
-
   state = {
     data: [],
     pagination: {
       current: 1,
       pageSize: 10,
+      hideOnSinglePage: true,
     },
     loading: false,
   };
@@ -139,15 +140,6 @@ class Films extends React.Component {
     const {pagination} = this.state;
     this.fetch({pagination});
   }
-
-  handleTableChange = (pagination, filters, sorter) => {
-    this.fetch({
-      sortField: sorter.field,
-      sortOrder: sorter.order,
-      pagination,
-      ...filters,
-    });
-  };
 
   fetch = (params = {}) => {
     this.setState({loading: true});
@@ -163,7 +155,6 @@ class Films extends React.Component {
         data: data.results,
         pagination: {
           ...params.pagination,
-          hideOnSinglePage: true,
         },
       });
     });
@@ -175,14 +166,12 @@ class Films extends React.Component {
       <div>
         <BackButton />
         <Table
-          scroll={{x: 1800}}
           sticky
           columns={COLUMNS}
           rowKey={(record) => record.key}
           dataSource={data}
           pagination={pagination}
           loading={loading}
-          onChange={this.handleTableChange}
         />
       </div>
     );
