@@ -175,7 +175,7 @@ class Films extends React.Component {
       <div>
         <BackButton />
         <Table
-          scroll={{x: 1500}}
+          scroll={{x: 1800}}
           sticky
           columns={COLUMNS}
           rowKey={(record) => record.key}
