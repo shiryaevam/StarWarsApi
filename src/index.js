@@ -8,9 +8,10 @@ import HomeContainer from "./components/Home/HomeContainer";
 import "antd/dist/antd.css";
 import Films from "./components/Films/Films";
 import PeopleContainer from "./components/People/PeopleContainer";
-import BackButton from "./components/BackButton/BackButton";
 import PlanetsContainer from "./components/Planets/PlanetsContainer";
 import StarshipsContainer from "./components/Starships/StarshipsContainer";
+import SpeciesContainer from "./components/Species/SpeciesContainer";
+import VehiclesContainer from "./components/Vehicles/VehiclesContainer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,9 +21,9 @@ ReactDOM.render(
         <Route path="/films" component={Films} />
         <Route path="/people" component={PeopleContainer} />
         <Route path="/planets" component={PlanetsContainer} />
-        <Route path="/species" component={BackButton} />
+        <Route path="/species" component={SpeciesContainer} />
         <Route path="/starships" component={StarshipsContainer} />
-        <Route path="/vehicles" component={BackButton} />
+        <Route path="/vehicles" component={VehiclesContainer} />
       </Provider>
     </Router>
   </React.StrictMode>,

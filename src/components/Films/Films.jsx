@@ -89,7 +89,7 @@ const COLUMNS = [
   //   responsive: ["sm"],
   // },
   // {
-  //   title: "Species",
+  //   title: "Vehicles",
   //   dataIndex: "species",
   //   key: "species",
   //   render: (text) => {
