@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import {store} from "./redux/store";
-import {Provider} from "react-redux";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import HomeContainer from "./components/Home/HomeContainer";
 import "antd/dist/antd.css";
@@ -16,15 +14,13 @@ import VehiclesContainer from "./components/Vehicles/VehiclesContainer";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Provider store={store}>
-        <Route exact path="/" component={HomeContainer} />
-        <Route path="/films" component={Films} />
-        <Route path="/people" component={PeopleContainer} />
-        <Route path="/planets" component={PlanetsContainer} />
-        <Route path="/species" component={SpeciesContainer} />
-        <Route path="/starships" component={StarshipsContainer} />
-        <Route path="/vehicles" component={VehiclesContainer} />
-      </Provider>
+      <Route exact path="/" component={HomeContainer} />
+      <Route path="/films" component={Films} />
+      <Route path="/people" component={PeopleContainer} />
+      <Route path="/planets" component={PlanetsContainer} />
+      <Route path="/species" component={SpeciesContainer} />
+      <Route path="/starships" component={StarshipsContainer} />
+      <Route path="/vehicles" component={VehiclesContainer} />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
