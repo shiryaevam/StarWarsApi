@@ -195,7 +195,7 @@ class PlanetsContainer extends React.Component {
         dataIndex: "diameter",
         key: "diameter",
         responsive: ["sm"],
-        ...this.getColumnSearchProps("diameter"),
+        sorter: (a, b) => a.diameter - b.diameter,
       },
       {
         title: "Climate",
