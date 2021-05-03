@@ -10,6 +10,7 @@ import Films from "./components/Films/Films";
 import PeopleContainer from "./components/People/PeopleContainer";
 import BackButton from "./components/BackButton/BackButton";
 import PlanetsContainer from "./components/Planets/PlanetsContainer";
+import StarshipsContainer from "./components/Starships/StarshipsContainer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,7 +21,7 @@ ReactDOM.render(
         <Route path="/people" component={PeopleContainer} />
         <Route path="/planets" component={PlanetsContainer} />
         <Route path="/species" component={BackButton} />
-        <Route path="/starships" component={BackButton} />
+        <Route path="/starships" component={StarshipsContainer} />
         <Route path="/vehicles" component={BackButton} />
       </Provider>
     </Router>
